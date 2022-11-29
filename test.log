@@ -1,0 +1,31 @@
+2022-11-29T16:48:38.315+0800	ERROR	mysql/user.go:13	Error 1146: Table 'web_app.user' doesn't exist
+2022-11-29T16:51:29.899+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T16:51:38.911+0800	ERROR	mysql/user.go:13	Error 1146: Table 'web_app.user' doesn't exist
+2022-11-29T16:53:30.908+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T16:53:40.659+0800	ERROR	mysql/user.go:13	Error 1630: FUNCTION myself.count does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+2022-11-29T16:57:33.631+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T16:57:41.705+0800	ERROR	mysql/user.go:20	must pass a pointer, not a value, to StructScan destination
+2022-11-29T16:59:59.692+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:06:24.935+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:08:37.707+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:14:45.823+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:14:53.466+0800	INFO	controller/user.go:14	Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag
+2022-11-29T17:17:07.430+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:19:01.132+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:20:22.084+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:21:37.602+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:22:45.178+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:23:23.426+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:23:55.640+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:25:36.661+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:30:29.989+0800	ERROR	myself/main.go:58	<nil>
+2022-11-29T17:32:48.391+0800	ERROR	myself/main.go:60	<nil>
+2022-11-29T17:32:55.820+0800	INFO	mysql/user.go:24	username has existed
+2022-11-29T17:32:56.939+0800	INFO	mysql/user.go:24	username has existed
+2022-11-29T17:36:01.131+0800	ERROR	myself/main.go:60	<nil>
+2022-11-29T17:36:08.507+0800	INFO	mysql/user.go:24	username has existed
+2022-11-29T17:39:32.247+0800	ERROR	myself/main.go:60	<nil>
+2022-11-29T17:39:38.854+0800	INFO	mysql/user.go:24	username has existed
+2022-11-29T17:40:51.930+0800	ERROR	myself/main.go:60	<nil>
+2022-11-29T17:40:59.682+0800	INFO	mysql/user.go:24	username has existed
+2022-11-29T17:41:09.613+0800	ERROR	myself/main.go:60	<nil>
