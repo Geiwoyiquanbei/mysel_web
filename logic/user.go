@@ -5,6 +5,7 @@ import (
 	"myself/dao/mysql"
 	"myself/logger"
 	"myself/module"
+	"myself/pkg/JWt"
 	"myself/pkg/snowflake"
 )
 
@@ -29,6 +30,28 @@ func SignUp(p *module.ParamSignUp) (err error) {
 	}
 	return nil
 }
+
+func LogIn(p *module.ParamLogIn) error {
+	//获取数据库的该用户的密码
+	var u = &module.User{
+		Username: p.Username,
+		Password: p.Password,
+	}
+	err := mysql.GetUser(u)
+	if err != nil {
+		logger.Log.Error(err)
+		return err
+	}
+	if ValidatePasswords(u.Password, []byte(p.Password)) == false {
+		return mysql.ErrorInvalidPassword
+	}
+	p.UserID = u.User_id
+	//返回token
+	token, rToken, err := JWt.GenToken2(u.Username, u.Password)
+	p.Token = token
+	p.Rtoken = rToken
+	return nil
+}
 func HashAndSalt(pwd []byte) (string, error) {
 	hash, err := bcrypt.GenerateFromPassword(pwd, bcrypt.MinCost)
 	if err != nil {
@@ -38,11 +61,11 @@ func HashAndSalt(pwd []byte) (string, error) {
 }
 
 //验证密码
-//func ValidatePasswords(hashedPwd string, plainPwd []byte) bool {
-//	byteHash := []byte(hashedPwd)
-//	err := bcrypt.CompareHashAndPassword(byteHash, plainPwd)
-//	if err != nil {
-//		return false
-//	}
-//	return true
-//}
+func ValidatePasswords(hashedPwd string, plainPwd []byte) bool {
+	byteHash := []byte(hashedPwd)
+	err := bcrypt.CompareHashAndPassword(byteHash, plainPwd)
+	if err != nil {
+		return false
+	}
+	return true
+}

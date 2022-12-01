@@ -29,3 +29,12 @@
 2022-11-29T17:40:51.930+0800	ERROR	myself/main.go:60	<nil>
 2022-11-29T17:40:59.682+0800	INFO	mysql/user.go:24	username has existed
 2022-11-29T17:41:09.613+0800	ERROR	myself/main.go:60	<nil>
+2022-11-30T16:43:09.253+0800	ERROR	myself/main.go:60	<nil>
+2022-11-30T16:49:49.592+0800	ERROR	myself/main.go:60	<nil>
+2022-11-30T16:50:09.928+0800	ERROR	myself/main.go:60	<nil>
+2022-11-30T16:52:31.343+0800	ERROR	logic/user.go:41	missing destination name user_id in *module.User
+2022-11-30T17:00:52.283+0800	ERROR	myself/main.go:60	<nil>
+2022-11-30T17:01:08.713+0800	ERROR	controller/user.go:40	用户名或密码错误
+2022-11-30T17:01:21.348+0800	ERROR	myself/main.go:60	<nil>
+2022-12-01T15:11:57.650+0800	ERROR	controller/user.go:40	用户名或密码错误
+2022-12-01T15:39:07.694+0800	ERROR	myself/main.go:60	<nil>

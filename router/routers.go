@@ -3,6 +3,7 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"myself/controller"
+	"myself/middleware"
 	"net/http"
 )
 
@@ -12,6 +13,12 @@ func Setup() (r *gin.Engine, err error) {
 		context.JSON(http.StatusOK, "pong!")
 	})
 	r.POST("/signup", controller.SignUpHandler)
-	r.Group("api/talk")
+	r.POST("/login", controller.LogInHandler)
+	v := r.Group("api/talk")
+	v.Use(middleware.JWTAuthMiddleware())
+	{
+		v.GET("/community", controller.CommunityHandler)
+		v.GET("/community/:id", controller.CommunityIDHandler)
+	}
 	return r, nil
 }

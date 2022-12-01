@@ -27,3 +27,11 @@ func ResponseWithSuccess(c *gin.Context, code ResCode) {
 	}
 	c.JSON(http.StatusOK, rd)
 }
+func ResponseWithMsg(c *gin.Context, code ResCode, data interface{}) {
+	var rd = &ResData{
+		Code: code,
+		Msg:  Codemap[code],
+		Data: data,
+	}
+	c.JSON(http.StatusOK, rd)
+}

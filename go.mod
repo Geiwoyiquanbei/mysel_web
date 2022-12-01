@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/gin-gonic/gin v1.8.1
 	github.com/go-redis/redis v6.15.9+incompatible
@@ -11,6 +12,7 @@ require (
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/spf13/viper v1.14.0
 	go.uber.org/zap v1.21.0
+	golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
 
@@ -40,7 +42,6 @@ require (
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
-	golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e // indirect
 	golang.org/x/net v0.2.0 // indirect
 	golang.org/x/sys v0.2.0 // indirect
 	golang.org/x/text v0.4.0 // indirect

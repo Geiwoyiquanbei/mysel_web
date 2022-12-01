@@ -35,3 +35,20 @@ func InsertUser(u *module.User) (err error) {
 	}
 	return nil
 }
+func GetUser(u *module.User) (err error) {
+	sqlStr := "select count(username) from user where username = ?"
+	var count = 0
+	err = db.Get(&count, sqlStr, u.Username)
+	if err != nil {
+		return err
+	}
+	if count == 0 {
+		return ErrorUSerNotExist
+	}
+	sqlStr = "select user_id , password from user where username = ?"
+	err = db.Get(u, sqlStr, u.Username)
+	if err != nil {
+		return err
+	}
+	return nil
+}
