@@ -38,3 +38,32 @@
 2022-11-30T17:01:21.348+0800	ERROR	myself/main.go:60	<nil>
 2022-12-01T15:11:57.650+0800	ERROR	controller/user.go:40	用户名或密码错误
 2022-12-01T15:39:07.694+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T16:43:27.948+0800	ERROR	controller/post.go:16	json: cannot unmarshal string into Go struct field ParamPost.community_id of type int64
+2022-12-02T16:45:29.639+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T16:46:44.419+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:06:06.852+0800	ERROR	controller/post.go:30	Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?,?,?,?,?' at line 1
+2022-12-02T17:07:11.206+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:07:44.852+0800	ERROR	controller/post.go:30	sql: expected 5 arguments, got 4
+2022-12-02T17:08:45.113+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:08:53.229+0800	ERROR	controller/post.go:30	Error 1366: Incorrect integer value: '路漫漫其修远兮' for column 'author_id' at row 1
+2022-12-02T17:09:39.717+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:13:34.639+0800	ERROR	controller/post.go:70	Error 1054: Unknown column 'communtiy_id' in 'where clause'
+2022-12-02T17:14:12.605+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:15:54.230+0800	ERROR	controller/post.go:57	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:18:26.876+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:20:45.036+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:21:20.532+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:22:34.034+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:27:14.264+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:27:43.283+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:27:50.152+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:29:39.266+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:30:42.631+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:34:26.964+0800	ERROR	controller/community.go:32	sql: no rows in result set
+2022-12-02T17:34:38.218+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:36:08.083+0800	ERROR	controller/post.go:39	strconv.ParseInt: parsing "": invalid syntax
+2022-12-02T17:37:27.773+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:37:41.600+0800	ERROR	controller/post.go:47	Error 1054: Unknown column 'creat_time' in 'field list'
+2022-12-02T17:39:22.329+0800	ERROR	myself/main.go:60	<nil>
+2022-12-02T17:39:31.277+0800	ERROR	controller/post.go:47	sql: no rows in result set
+2022-12-02T17:41:41.924+0800	ERROR	myself/main.go:60	<nil>

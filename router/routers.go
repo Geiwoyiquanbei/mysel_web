@@ -19,6 +19,9 @@ func Setup() (r *gin.Engine, err error) {
 	{
 		v.GET("/community", controller.CommunityHandler)
 		v.GET("/community/:id", controller.CommunityIDHandler)
+		v.POST("/post", controller.CreatePostHandler)
+		v.GET("/post/:id", controller.GetPostDetailHandler)
+		v.GET("/posts", controller.GetPostsHandler)
 	}
 	return r, nil
 }

@@ -14,6 +14,7 @@ var MySecret = []byte("长亭外古道边")
 var FreshToken string = "default"
 
 type MyCalims struct {
+	User_ID  int64  `json:"user_id"`
 	Password string `json:"password"`
 	Username string `json:"username"`
 	jwt.StandardClaims
@@ -24,8 +25,9 @@ func keyFunc(token *jwt.Token) (interface{}, error) {
 }
 
 // 生成 access_token 和 refresh_token
-func GenToken2(username, password string) (aToken, rToken string, err error) {
+func GenToken2(user_id int64, username, password string) (aToken, rToken string, err error) {
 	calims := MyCalims{
+		User_ID:  user_id,
 		Username: username,
 		Password: password,
 		StandardClaims: jwt.StandardClaims{
@@ -71,7 +73,7 @@ func RefreshToken(aToken, rToken string) (newToken, newrToken string, err error)
 
 	// 当 access token 是过期错误，并且 refresh token 没有过期就创建一个新的 access token
 	if v.Errors == jwt.ValidationErrorExpired {
-		return GenToken2(claims.Username, claims.Password)
+		return GenToken2(claims.User_ID, claims.Username, claims.Password)
 	}
 	return "", "", err
 }

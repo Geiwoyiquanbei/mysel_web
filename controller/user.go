@@ -50,7 +50,7 @@ func LogInHandler(c *gin.Context) {
 		ResponseWithError(c, CodeError)
 		return
 	}
-	c.Set("user_id", p.UserID)
+
 	c.JSON(http.StatusOK, gin.H{
 		"user_id":  p.UserID,
 		"username": p.Username,

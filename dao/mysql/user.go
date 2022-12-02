@@ -52,3 +52,9 @@ func GetUser(u *module.User) (err error) {
 	}
 	return nil
 }
+func GetUserByID(uid int64) *module.UserInfo {
+	sqlStr := `select username,user_id from user where user_id = ?`
+	uinfo := new(module.UserInfo)
+	db.Get(uinfo, sqlStr, uid)
+	return uinfo
+}

@@ -47,7 +47,7 @@ func LogIn(p *module.ParamLogIn) error {
 	}
 	p.UserID = u.User_id
 	//返回token
-	token, rToken, err := JWt.GenToken2(u.Username, u.Password)
+	token, rToken, err := JWt.GenToken2(u.User_id, u.Username, u.Password)
 	p.Token = token
 	p.Rtoken = rToken
 	return nil

@@ -2,6 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
+	"myself/controller"
 	"myself/pkg/JWt"
 )
 
@@ -23,10 +24,11 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		if err == nil {                            // 当前的 access_token 格式对，没有过期
 			c.JSON(200, gin.H{
 				"msg":  "atoken 和 ftoken 没有过期",
-				"data": parasToken,
+				"data": parasToken.User_ID,
 				"code": 400,
 			})
 			c.Next()
+			c.Set(controller.CtxUserID, parasToken.User_ID)
 			return
 		}
 		atoken, rToken, err := JWt.RefreshToken(atoken, ftoken)
@@ -44,6 +46,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 				"rToken": rToken,
 				"code":   400,
 			})
+			c.Set(controller.CtxUserID, parasToken.User_ID)
 			c.Next()
 			return
 		}

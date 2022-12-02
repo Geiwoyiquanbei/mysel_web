@@ -11,7 +11,7 @@ func GetCommunity(cl *[]module.Community) (err error) {
 	return nil
 }
 func GetCommunityByID(id int64) (*module.Community, error) {
-	sqlStr := `select community_id,community_name,introduction from community where communtiy_id=?`
+	sqlStr := `select community_id,community_name,introduction from community where community_id=?`
 	var data = new(module.Community)
 	err := db.Get(data, sqlStr, id)
 	if err != nil {
