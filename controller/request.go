@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const CtxUserID = "uerid"
+const CtxUserID = "userid"
 
 var ERRorUserNotLogin = errors.New("用户未登录")
 

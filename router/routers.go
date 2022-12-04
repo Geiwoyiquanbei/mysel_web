@@ -22,6 +22,8 @@ func Setup() (r *gin.Engine, err error) {
 		v.POST("/post", controller.CreatePostHandler)
 		v.GET("/post/:id", controller.GetPostDetailHandler)
 		v.GET("/posts", controller.GetPostsHandler)
+		v.POST("/vote", controller.VoteHandler)
+		v.GET("/posts2", controller.GetPostListHandler)
 	}
 	return r, nil
 }

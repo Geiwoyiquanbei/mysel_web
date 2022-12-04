@@ -67,3 +67,38 @@
 2022-12-02T17:39:22.329+0800	ERROR	myself/main.go:60	<nil>
 2022-12-02T17:39:31.277+0800	ERROR	controller/post.go:47	sql: no rows in result set
 2022-12-02T17:41:41.924+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T15:48:57.922+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T15:49:50.883+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:01:59.894+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:06:32.344+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:22:49.476+0800	ERROR	controller/vote.go:15	Key: 'ParamPostVoted.PostID' Error:Field validation for 'PostID' failed on the 'required' tag
+Key: 'ParamPostVoted.Vote' Error:Field validation for 'Vote' failed on the 'required' tag
+2022-12-04T16:23:43.483+0800	ERROR	controller/vote.go:15	Key: 'ParamPostVoted.Vote' Error:Field validation for 'Vote' failed on the 'required' tag
+2022-12-04T16:25:04.558+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:25:12.503+0800	ERROR	controller/vote.go:15	Key: 'ParamPostVoted.Vote' Error:Field validation for 'Vote' failed on the 'required' tag
+2022-12-04T16:25:15.652+0800	ERROR	controller/vote.go:15	Key: 'ParamPostVoted.Vote' Error:Field validation for 'Vote' failed on the 'required' tag
+2022-12-04T16:25:20.327+0800	ERROR	controller/vote.go:23	请勿重复投票
+2022-12-04T16:26:24.141+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:28:47.531+0800	ERROR	controller/vote.go:23	请勿重复投票
+2022-12-04T16:32:14.392+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:35:32.112+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:37:56.789+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:39:22.427+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:43:44.908+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:46:38.632+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:46:46.723+0800	ERROR	logic/post.go:59	sql: no rows in result set
+2022-12-04T16:46:46.723+0800	ERROR	controller/post.go:93	sql: no rows in result set
+2022-12-04T16:47:01.170+0800	ERROR	logic/post.go:59	sql: no rows in result set
+2022-12-04T16:47:01.170+0800	ERROR	controller/post.go:93	sql: no rows in result set
+2022-12-04T16:49:50.501+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T16:50:01.337+0800	ERROR	logic/post.go:59	sql: no rows in result set
+2022-12-04T16:50:01.337+0800	ERROR	controller/post.go:93	sql: no rows in result set
+2022-12-04T16:52:31.946+0800	ERROR	logic/post.go:59	sql: no rows in result set
+2022-12-04T16:52:31.946+0800	ERROR	controller/post.go:93	sql: no rows in result set
+2022-12-04T16:55:39.131+0800	ERROR	logic/post.go:59	sql: no rows in result set
+2022-12-04T16:55:39.131+0800	ERROR	controller/post.go:93	sql: no rows in result set
+2022-12-04T16:58:53.598+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T17:25:12.711+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T17:28:01.743+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T17:33:31.538+0800	ERROR	myself/main.go:60	<nil>
+2022-12-04T17:33:58.067+0800	ERROR	myself/main.go:60	<nil>

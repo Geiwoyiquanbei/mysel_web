@@ -19,6 +19,7 @@ func CreatePostHandler(c *gin.Context) {
 		return
 	}
 	value, _ := GetCurrentUserID(c)
+	fmt.Println(value)
 	pos := new(module.Post)
 	pos.Author_id = value
 	pos.Title = p.Title
@@ -66,7 +67,7 @@ func GetPostsHandler(c *gin.Context) {
 		ResponseWithError(c, CodeError)
 		return
 	}
-	data, err := logic.GetPostsHandler(p, s)
+	data, err := logic.GetPosts(p, s)
 	if err != nil {
 		logger.Log.Error(err)
 		ResponseWithError(c, CodeError)
@@ -74,4 +75,36 @@ func GetPostsHandler(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, data)
 	return
+}
+func GetPostListHandler(c *gin.Context) {
+	p := &module.ParamPostList{
+		Page:  1,
+		Size:  10,
+		Order: "time",
+	}
+	err := c.ShouldBindQuery(p)
+	if err != nil {
+		logger.Log.Error(err)
+		ResponseWithError(c, CodeInvalidParam)
+		return
+	}
+	if p.CommunityID == 0 {
+		data, err := logic.GetPostList(p.Page, p.Size, p.Order)
+		if err != nil {
+			logger.Log.Error(err)
+			ResponseWithError(c, CodeError)
+			return
+		}
+		ResponseWithMsg(c, CodeSuccess, data)
+		return
+	} else {
+		data, err := logic.GetPostListByCommunity(p.CommunityID, p.Page, p.Size, p.Order)
+		if err != nil {
+			logger.Log.Error(err)
+			ResponseWithError(c, CodeError)
+			return
+		}
+		ResponseWithMsg(c, CodeSuccess, data)
+		return
+	}
 }

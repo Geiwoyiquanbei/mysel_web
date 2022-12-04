@@ -27,8 +27,8 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 				"data": parasToken.User_ID,
 				"code": 400,
 			})
-			c.Next()
 			c.Set(controller.CtxUserID, parasToken.User_ID)
+			c.Next()
 			return
 		}
 		atoken, rToken, err := JWt.RefreshToken(atoken, ftoken)
