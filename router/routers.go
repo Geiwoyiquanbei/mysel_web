@@ -5,6 +5,7 @@ import (
 	"myself/controller"
 	"myself/middleware"
 	"net/http"
+	"time"
 )
 
 func Setup() (r *gin.Engine, err error) {
@@ -12,6 +13,7 @@ func Setup() (r *gin.Engine, err error) {
 	r.GET("/ping", func(context *gin.Context) {
 		context.JSON(http.StatusOK, "pong!")
 	})
+	r.Use(middleware.RareLimitMiddleware(time.Second, 10))
 	r.POST("/signup", controller.SignUpHandler)
 	r.POST("/login", controller.LogInHandler)
 	v := r.Group("api/talk")
